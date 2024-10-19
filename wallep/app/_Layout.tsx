@@ -9,6 +9,10 @@ export default function _Layout() {
     return (
         <SafeAreaView>
 
+            <View style={{ height: "90%" }}>
+                <Slot />
+            </View>
+
 
             <Link href={"/account"}>
                 <Text>
@@ -28,7 +32,6 @@ export default function _Layout() {
                 </Text>
             </Link>
 
-            <Slot />
 
         </SafeAreaView>
 
