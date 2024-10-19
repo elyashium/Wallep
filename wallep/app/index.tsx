@@ -1,8 +1,7 @@
-import { View, Text } from "react-native";
+import { Text, View } from "react-native";
 
-export default function(){
-    
+export default function Foryou() {
     return <View>
-    <Text> hi there </Text>
+        <Text> For you </Text>
     </View>
 }

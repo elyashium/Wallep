@@ -1,31 +1,38 @@
-import { Link } from "expo-router";
-import { Text } from "react-native";
+import { Link, Slot } from "expo-router";
+import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
 
 
 export default function _Layout() {
-  return (
-      <SafeAreaView>
-        <Link href={"/Account"}>
-        <Text>
-            Take me to the accounts page
-        </Text>
-        </Link>
+    return (
+        <SafeAreaView>
 
-        <Link href={"/Explore"}>
-        <Text>
-            Take me to the Explore page
-        </Text>
-        </Link>
 
-        <Link href={"/Foryou"}>
-        <Text>
-            Take me to the For you page
-        </Text>
-        </Link>
+            <Link href={"/account"}>
+                <Text>
+                    Take me to the accounts page
+                </Text>
+            </Link>
 
-    </SafeAreaView>
-  )
+            <Link href={"/explore"}>
+                <Text>
+                    Take me to the Explore page
+                </Text>
+            </Link>
+
+            <Link href={"/"}>
+                <Text>
+                    Take me to the For you page
+                </Text>
+            </Link>
+
+            <Slot />
+
+        </SafeAreaView>
+
+
+
+    )
 }
