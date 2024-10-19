@@ -1,6 +1,6 @@
-import { Link, Slot } from "expo-router";
-import { Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+// import { Link, Slot } from "expo-router";
+// import { Text, View } from "react-native";
+// import { SafeAreaView } from "react-native-safe-area-context";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 
@@ -10,7 +10,7 @@ import { Tabs } from 'expo-router';
 
 export default function _Layout() {
     return (
-        <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+        <Tabs screenOptions={{ tabBarActiveTintColor: 'green', headerShown: false }}>
             <Tabs.Screen
                 name="index"
                 options={{

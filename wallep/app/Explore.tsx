@@ -1,7 +1,11 @@
 import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function EXplore() {
-    return <View>
-        <Text> EXplore</Text>
-    </View>
+    return (
+
+        <SafeAreaView>
+            <Text> EXplore</Text>
+        </SafeAreaView>
+    )
 }
