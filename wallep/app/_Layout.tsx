@@ -1,41 +1,39 @@
 import { Link, Slot } from "expo-router";
 import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { Tabs } from 'expo-router';
 
 
+// this page will render in evrery page 
 
 
 export default function _Layout() {
     return (
-        <SafeAreaView>
+        <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+            <Tabs.Screen
+                name="index"
+                options={{
+                    title: 'For you',
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
+                }}
+            />
+            <Tabs.Screen
+                name="account"
+                options={{
+                    title: 'Accounts',
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+                }}
+            />
 
-            <View style={{ height: "90%" }}>
-                <Slot />
-            </View>
+            <Tabs.Screen
+                name="explore"
+                options={{
+                    title: 'Explore',
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+                }}
+            />
+        </Tabs>
 
-
-            <Link href={"/account"}>
-                <Text>
-                    Take me to the accounts page
-                </Text>
-            </Link>
-
-            <Link href={"/explore"}>
-                <Text>
-                    Take me to the Explore page
-                </Text>
-            </Link>
-
-            <Link href={"/"}>
-                <Text>
-                    Take me to the For you page
-                </Text>
-            </Link>
-
-
-        </SafeAreaView>
-
-
-
-    )
+    );
 }
