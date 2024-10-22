@@ -10,8 +10,9 @@ const Tab = createMaterialTopTabNavigator();
 export default function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="Liked" component={HomeScreen} />
+      <Tab.Screen name="Library" component={HomeScreen} />
+      <Tab.Screen name="Suggested" component={SettingsScreen} />
     </Tab.Navigator>
   );
 }
