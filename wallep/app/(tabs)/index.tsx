@@ -1,17 +1,39 @@
-import { Link } from "expo-router";
-import { Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+// import { Link } from "expo-router";
+// import { Text, View } from "react-native";
+// import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function Foryou() {
-    return (
-        <SafeAreaView>
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { View, Text } from 'react-native';
 
-            <Link href={"/liked"}> Liked page  </Link>
-            <Link href={"/library"}> library page  </Link>
-            <Link href={"/suggested"}> suggested page  </Link>
+const Tab = createMaterialTopTabNavigator();
 
-            <Text> For you </Text>
-            
-        </SafeAreaView>
+export default function MyTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+    </Tab.Navigator>
+  );
+}
+
+function HomeScreen(){
+    return(
+        <View>
+            <Text>
+                hi from the home screen
+            </Text>
+        </View>
+    )
+}
+
+//traditonal way to react-navigation routing.
+
+function SettingsScreen(){
+    return(
+        <View>
+            <Text>
+                hi from the home screen
+            </Text>
+        </View>
     )
 }
