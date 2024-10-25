@@ -16,8 +16,10 @@ export const Bottom = () => {
     return (
         <GestureHandlerRootView style={styles.container}>
             <BottomSheet
+             snapPoints ={["90%"]}
                 ref={bottomSheetRef}
                 onChange={handleSheetChanges}
+                enablePanDownToClose={true}
             >
                 <BottomSheetView style={styles.contentContainer}>
                     <Text>Awesome 🎉</Text>
