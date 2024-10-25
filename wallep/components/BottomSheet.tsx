@@ -16,20 +16,20 @@ export const Bottom = ({ onClose }: {
 
     // renders
     return (
-        <GestureHandlerRootView style={styles.container}>
-            <BottomSheet
-                onClose={onClose}
-                snapPoints={["95%"]}
-                ref={bottomSheetRef}
-                onChange={handleSheetChanges}
-                enablePanDownToClose={true}
-                handleIndicatorStyle={{height:0}}
-            >
-                <BottomSheetView style={styles.contentContainer}>
-                    <Text>Awesome 🎉</Text>
-                </BottomSheetView>
-            </BottomSheet>
-        </GestureHandlerRootView>
+            <GestureHandlerRootView style={styles.container}>
+                <BottomSheet
+                    onClose={onClose}
+                    snapPoints={["95%"]}
+                    ref={bottomSheetRef}
+                    onChange={handleSheetChanges}
+                    enablePanDownToClose={true}
+                    handleIndicatorStyle={{ height: 0 }}
+                >
+                    <BottomSheetView style={styles.contentContainer}>
+                        <Text>Awesome 🎉</Text>
+                    </BottomSheetView>
+                </BottomSheet>
+            </GestureHandlerRootView>
     );
 };
 
