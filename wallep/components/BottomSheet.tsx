@@ -3,6 +3,8 @@ import { View, Text, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
 
+// we could have used drawers instead of external bottom sheet.
+
 export const Bottom = ({ onClose }: {
     onClose: () => void;
 }) => {
