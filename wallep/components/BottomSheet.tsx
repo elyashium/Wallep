@@ -3,7 +3,9 @@ import { View, Text, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
 
-export const Bottom = () => {
+export const Bottom = ({ onClose }: {
+    onClose: () => void;
+}) => {
     // ref
     const bottomSheetRef = useRef<BottomSheet>(null);
 
@@ -16,10 +18,12 @@ export const Bottom = () => {
     return (
         <GestureHandlerRootView style={styles.container}>
             <BottomSheet
-             snapPoints ={["90%"]}
+                onClose={onClose}
+                snapPoints={["95%"]}
                 ref={bottomSheetRef}
                 onChange={handleSheetChanges}
                 enablePanDownToClose={true}
+                handleIndicatorStyle={{height:0}}
             >
                 <BottomSheetView style={styles.contentContainer}>
                     <Text>Awesome 🎉</Text>
@@ -32,7 +36,6 @@ export const Bottom = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'grey',
     },
     contentContainer: {
         flex: 1,
